@@ -19,6 +19,7 @@ const addAdvice = (e) => {
     }
 
     advice.push(input.value);
+    alert(`Dodana została opcja: ${input.value}`);
     input.value = "";
   } else {
     alert("Musisz coś wpisać...");
@@ -34,6 +35,7 @@ addBtn.addEventListener(`click`, addAdvice);
 const cleanAdvice = (e) => {
   e.preventDefault();
   advice.length = 0;
+  alert("Wszystkie opcje zostały usunięte.");
 };
 
 // 'Reset' listener
@@ -55,7 +57,7 @@ showAdviceBtn.addEventListener(`click`, showAdvice);
 
 // 'Options' function
 const showOptions = () => {
-  alert(advice);
+  alert(advice.join(" --- --- "));
 };
 
 // 'Options' listener
